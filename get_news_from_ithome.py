@@ -25,7 +25,7 @@ def get_proxy():
         tds = ip_info.find_all('td')
         proxy_list.append(tds[1].text + ':' + tds[2].text)
 
-    proxy = proxy_list[random.randint(0, len(proxy_list))]
+    proxy = proxy_list[random.randint(0, len(proxy_list))-1]
 
     print("Proxy:", proxy)
     return proxy
