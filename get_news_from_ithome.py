@@ -31,6 +31,7 @@ def get_proxy():
         tds = ip_info.find_all('td')
         proxy_list.append(tds[1].text + ':' + tds[2].text)
 
+<<<<<<< HEAD
     if len(proxy_list) == 0:
         print("可能被代理网站屏蔽了", '\n')
     else:
@@ -46,6 +47,9 @@ def get_proxy():
 # 执行一次可以更新本地代理地址；
 get_proxy()
 
+=======
+    proxy = proxy_list[random.randint(0, len(proxy_list))-1]
+>>>>>>> a8f448e62f05d655f61da58b4488d43fdd0f91d9
 
 # 从存放代理的 csv 中随机获取一个代理
 def get_random_proxy():
